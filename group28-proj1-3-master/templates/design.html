@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Design Page</title>
+  </head>
+  <body>
+    <a href = "/{{session['username']}}user">User Page</a>  
+    <h3>Submit your design!</h3>
+    <p>
+      <i>
+        Note: Please upload a picture of your design externally and provide the
+        URL below.
+      </i>
+    </p>
+    <form action="#" method="POST">
+      <label>Product Name:</label><br />
+      <input type="text" name="pname" required /><br />
+      <label>Choose a category:</label>
+      <select name="category" required>
+	      <option value="tshirt">T-Shirt</option>
+        <option value="sticker">Sticker</option>
+        <option value="phone">Phone Case</option>
+        <option value="wallart">Wall Art</option>
+        <option value="accessory">Accessory</option>
+        <option value="stationery">Stationery</option>
+        <option value="home">Home & Living</option>
+        <option value="kids">Kids & Babies</option>
+      </select>
+      <br>
+      <label>Cost:</label><br />
+      <input type="number" name="cost" required />
+      <br>
+      <label>Description:</label><br />
+      <input type="text" name="description" required/>
+      <br>
+      <label>Picture (URL):</label><br />
+      <input type="text" name="ppic" required/>
+      <br>
+      <label>Tag:</label><br />
+      <input type="text" name="tag" required/>
+      <br>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+	<head><title>Active Users</title></head>
+
+	<body>
+		<h2>Active Users</h2>
+	{% for i in cursor %}
+	<p>{{i[1]}}</p>
+	{% endfor %}
+	</body>
+</html>

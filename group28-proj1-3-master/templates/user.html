@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{value}} Porfile</title>
+  </head>
+  <body>
+    <h2>Welcome {{value}}</h2>
+    <h4>{{value}} Profile</h4>
+    <a href="/logout">Logout</a>
+	<a href="/">Home</a>
+    <form action="#" method="POST">
+      <label>Username:</label><br />
+      <input
+        type="text"
+        name="uname"
+	placeholder="{{session['username']}}"
+      />
+      <input type="submit" name="action" value="upUname" /><br>
+      <label>Email:</label>
+      <input type="text" name="email" placeholder="{{session['email']}}" />
+      <input type="submit" name="action" value="upEmail" /><br>
+      <label>Picture URL:</label>
+      <br>
+      <input type="text" name="picURL" placeholder="Enter a new URL" /><br>
+      <input type="submit" name="action" value="upURL" /><br>
+
+      <!--a tags-->
+      <a href="/design">Submit a Design</a> <br>
+      <a href="/{{session['username']}}mail">Open Mail</a>
+    </form>
+  </body>
+</html>

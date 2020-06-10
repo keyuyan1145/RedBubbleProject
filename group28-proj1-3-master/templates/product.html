@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <title>Product</title>
+  </head>
+  <body>
+	  <a href="/">Home</a><br>
+	  <a href="/logout">Logout</a><br>
+    {% for x in pinfo %} 
+    <h1>{{x[3]}}</h1><br>
+    <img src="{{x[7]}}" alt="{{x[3]}}" height="500" width="500"><br>
+    <h2>Category: {{x[4]}}</h2>
+    <h3> Designed by: {{x[1]}}</h3>
+    <h3>${{x[5]}}</h3>
+    <h4>Description:</h4>
+    <p>{{x[6]}}</p>
+    {% endfor %}
+
+    <h3>Reviews: </h3>
+    {% for x in rinfo %}
+    <p>{{x[0]}}</p>
+    <p>Posted by: {{x[4]}}</p>
+    <p>Posted at: {{x[1]}}</p>
+    {% endfor %}
+
+    {% if session['id'] %}
+    <div>
+	    <h5>Write a Review</h5>
+	    <textarea rows="4" cols="50" name="review" form="rbox" placeholder= "Write your review here"></textarea>
+	    <br>
+	    <form method="POST" id="rbox">
+		    <input type="submit" value="Post">
+	    </form>
+    </div>
+    {% endif %}
+
+    <h3> Tags:</h3>
+    {% for x in tinfo %}
+    <p>{{x[1]}}</p>
+    {% endfor %}
+
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bubble Mail</title>
+  </head>
+  <body>
+    <a href="/{{session['username']}}user">User Page</a>
+    <h2>Welcome {{name}}</h2>
+    <h4>My  messages</h4>
+
+    <form action="#" methods="post">
+      {% for x in content1 %}
+      	<a href = "/{{x[1]}}message">Chat with {{x[0]}}</a>
+      {% endfor %} 
+      {% for x in content2 %}
+      <a href = "/{{x[1]}}message">Chat with {{x[0]}}</a>
+      {% endfor %}
+    </form>
+  </body>
+</html>

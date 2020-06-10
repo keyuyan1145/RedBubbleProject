@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Red Bubble</title>
+    </head>
+
+    <body>
+        <h1>Red Bubble</h1>
+        <p><a href="/login">Sign in</a></p>
+	<p><a href="/logout">Sign out</a></p>
+	<p><a href="/design">Design</a></p>
+	<p><a href="/{{session['username']}}mail">Mail</a></p>
+	<p><a href="/transaction{{session['username']}}">Transaction</a></p>
+	<p><a href="/but">Button: Interesting Queries</a></p>
+
+        <h2>View Products by : </h2>
+        <form method="POST" action="/result">
+            <p>Product Name: <input type="text" name="pname"></p>
+            <label for="category">Category:</label>
+              <select id="category" name="category">
+		<option value="" selected> No Preference</option>
+                <option value="Sticker">Sticker</option>
+                <option value="T-shirt">T-Shirt</option>
+                <option value="Phone Case">Phone Case</option>
+                <option value="Accessory">Accessory</option>
+                <option value="Stationery">Stationery</option>
+                <option value="Wall Art">Wall Art</option>
+                <option value="Home & Living">Home & Living</option>
+		<option value="Kids & Babies">Kids & Babies</option><!-- need to change this is database-->
+              </select>
+	      <br>
+          <label for="cost">Cost:</label>
+            <select id="cost" name="cost">
+	      <option value=""> No Preference </option>	
+              <option value="range1">$0-$3</option>
+              <option value="range2">$4-$13</option>
+              <option value="range3">$14-$19</option>
+              <option value="range4">$20-$28</option>
+            </select>
+            <br>
+        <input type="submit" value="Submit">
+        </form>
+    </body>

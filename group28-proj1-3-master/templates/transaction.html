@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transaction History</title>
+  </head>
+  <body>
+    <h2>Transaction History</h2>
+    <h5>
+      Tuple: (Transaction_id, Trans_Timestamp, Product_Name, Category, Quantity,
+      Delivered By)
+    </h5>
+    {% for x in content %}
+    <p>Transaction ID: {{x[0]}}</p>
+    <p>Transaction Date: {{x[1]}}</p>
+    <P>Product Name: {{x[2]}}</p>
+    <p>Category: {{x[3]}}</p>
+    <p>Quantity Purchased:{{x[4]}}</p>
+    <p>Delivered By: {{x[5]}}</p>
+    {% endfor %}
+  </body>
+  </html>

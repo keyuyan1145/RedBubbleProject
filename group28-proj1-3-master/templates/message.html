@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message</title>
+  </head>
+  <body>
+    <h2>View Messages</h2>
+    <a href ="/{{mail}}mail">Return to Mailbox</a>
+    {% for i in content %}
+    <p>Date: {{i[0]}} </p>
+    <p>Send by: {{i[1]}}</p>
+    <p>Message: {{i[2]}}</p>
+    {% endfor %}
+    <form method="POST">
+      <label>New message:</label><br />
+      <input type="text" name="msg" />
+      <input type="submit" value="send" />
+    </form>
+  </body>
+</html>
